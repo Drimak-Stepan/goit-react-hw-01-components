@@ -1,4 +1,6 @@
-.friendList {
+import styled from '@emotion/styled';
+
+export const List = styled.ul`
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -7,38 +9,42 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+`;
 
-.item {
+export const Item = styled.li`
   padding: 10px;
   display: flex;
   align-items: center;
   background-color: #fbfb68;
-}
+`;
 
-.status {
+export const Status = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-left: 10px;
-}
 
-.avatar {
+  background-color: ${({ isOnline }) => {
+    switch (isOnline) {
+      case false:
+        return '#ff0000';
+      case true:
+        return '#008000';
+      default:
+        return '#fbfb68b';
+    }
+  }};
+`;
+
+export const Avatar = styled.img`
   background-color: #ffffff;
   padding: 5px;
   border-radius: 15px;
   margin-right: 20px;
   margin-left: 20px;
-}
+`;
 
-.name {
+export const FriendName = styled.p`
   font-size: 20px;
   font-weight: 500;
-}
-
-.false {
-  background-color: #ff0000;
-}
-.true {
-  background-color: #008000;
-}
+`;

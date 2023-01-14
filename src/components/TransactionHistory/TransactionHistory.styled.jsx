@@ -1,30 +1,33 @@
-.transactionHistory {
+import styled from '@emotion/styled';
+
+export const Table = styled.table`
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
   width: 320px;
-}
-.thead {
+`;
+
+export const Thead = styled.thead`
   background-color: rgb(51, 69, 230);
   color: #ffffff;
-}
+`;
 
-.theadChild {
+export const TheadChild = styled.th`
   padding-top: 10px;
   padding-bottom: 10px;
-}
+`;
 
-.tbody {
+export const BodyTr = styled.tr`
   text-align: center;
-}
 
-.tbody:nth-child(2n) {
-  background-color: #fbfb68;
-}
+  :nth-of-type(2n) {
+    background-color: #fbfb68;
+  }
+`;
 
-.tbodyItem {
+export const BodyItem = styled.td`
   padding-top: 10px;
   padding-bottom: 10px;
   color: rgb(51, 69, 230);
-}
+`;

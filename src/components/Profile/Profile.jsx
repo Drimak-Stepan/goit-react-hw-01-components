@@ -1,6 +1,17 @@
 import PropTypes from 'prop-types';
 import defaulImage from '../Profile/logo512.png';
-import css from '../Profile/Profile.module.css';
+import {
+  Container,
+  Description,
+  Avatar,
+  UserName,
+  Tag,
+  Location,
+  Stats,
+  StatsLi,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
 export default function Profile({
   username = 'не відомо',
@@ -10,29 +21,29 @@ export default function Profile({
   stats,
 }) {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <Container>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <UserName>{username}</UserName>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={css.stats}>
-        <li>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsLi>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </StatsLi>
+        <StatsLi>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </StatsLi>
+        <StatsLi>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </StatsLi>
+      </Stats>
+    </Container>
   );
 }
 

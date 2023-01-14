@@ -1,12 +1,14 @@
-.profile {
+import styled from '@emotion/styled';
+
+export const Container = styled.div`
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 320px;
   background-color: rgb(145, 247, 247);
-}
+`;
 
-.description {
+export const Description = styled.div`
   padding: 30px;
   background-color: #fbfb68;
   display: flex;
@@ -15,56 +17,56 @@
   gap: 10px;
   border: 2px solid rgb(51, 69, 230);
   border-bottom: #fbfb68;
-}
+`;
 
-.avatar {
+export const Avatar = styled.img`
   border-radius: 50%;
   background-color: #ffffff;
   width: 150px;
   height: 150px;
-}
+`;
 
-.name {
+export const UserName = styled.p`
   font-size: 20px;
   font-weight: 700;
-}
+`;
 
-.tag {
+export const Tag = styled.p`
   color: #3216e4;
-}
+`;
 
-.location {
+export const Location = styled.p`
   color: #3216e4;
-}
+`;
 
-.stats {
+export const Stats = styled.ul`
   display: flex;
   justify-content: space-between;
   padding: 0;
   margin: 0;
   border: 2px solid #3216e4;
-}
+`;
 
-.stats li {
+export const StatsLi = styled.li`
   padding-top: 20px;
   padding-bottom: 20px;
   width: calc(100% / 3);
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.stats li:nth-child(2) {
-  border-right: 2px solid #3216e4;
-  border-left: 2px solid #3216e4;
-}
+  :nth-of-type(2) {
+    border-right: 2px solid #3216e4;
+    border-left: 2px solid #3216e4;
+  }
+`;
 
-.label {
+export const Label = styled.span`
   color: #3216e4;
-}
+`;
 
-.quantity {
+export const Quantity = styled.span`
   margin-top: 10px;
   font-weight: 700;
   font-size: 20px;
-}
+`;
